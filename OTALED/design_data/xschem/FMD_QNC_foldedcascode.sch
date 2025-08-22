@@ -27,7 +27,6 @@ N 940 280 940 320 {lab=#net6}
 N -140 380 -140 600 {lab=AVSS}
 N -200 600 -140 600 {lab=AVSS}
 N 940 380 940 600 {lab=AVSS}
-N 460 600 940 600 {lab=AVSS}
 N 940 190 1000 190 {lab=AVSS}
 N 1000 350 1000 600 {lab=AVSS}
 N 940 600 1000 600 {lab=AVSS}
@@ -254,38 +253,12 @@ N -1490 600 -1320 600 {lab=AVSS}
 N 1880 -80 1880 130 {lab=VOUT}
 N 2130 -130 2130 -80 {lab=VOUT}
 N 2130 -80 2150 -80 {lab=VOUT}
-N 2000 -80 2130 -80 {lab=VOUT}
-N 1990 -180 1990 -80 {lab=VOUT}
-N 1880 -80 1990 -80 {lab=VOUT}
-N 2000 -80 2000 -40 {lab=VOUT}
-N 1990 -80 2000 -80 {lab=VOUT}
-N 1920 -210 1960 -210 {lab=AVSS}
-N 1920 -210 1920 70 {lab=AVSS}
-N 1920 70 2000 70 {lab=AVSS}
-N 2000 20 2000 70 {lab=AVSS}
-N 1940 -10 1970 -10 {lab=AVDD}
-N 1940 -260 1940 -10 {lab=AVDD}
-N 1940 -260 1990 -260 {lab=AVDD}
-N 1990 -260 1990 -240 {lab=AVDD}
+N 1880 -80 2130 -80 {lab=VOUT}
 N 1880 190 1880 600 {lab=AVSS}
-N 1880 600 2000 600 {lab=AVSS}
-N 2000 70 2000 600 {lab=AVSS}
-N 1550 -760 1990 -760 {lab=AVDD}
-N 1990 -760 1990 -260 {lab=AVDD}
-N 770 -80 770 0 {lab=MINUS}
-N 1040 0 1080 0 {lab=MINUS}
-N 100 -80 100 0 {lab=PLUS}
-N -40 0 100 0 {lab=PLUS}
-N -180 -20 -180 0 {lab=PLUS}
-N -220 0 -180 0 {lab=PLUS}
-N 1040 -20 1040 0 {lab=MINUS}
-N 850 0 1040 0 {lab=MINUS}
-N -40 -60 -40 0 {lab=PLUS}
-N -180 0 -40 0 {lab=PLUS}
-N -40 0 -40 40 {lab=PLUS}
-N 850 -60 850 0 {lab=MINUS}
-N 770 0 850 0 {lab=MINUS}
-N 850 0 850 40 {lab=MINUS}
+N 810 -80 850 -80 {lab=MINUS}
+N 50 -100 50 -80 {lab=PLUS}
+N 10 -80 50 -80 {lab=PLUS}
+N 810 -100 810 -80 {lab=MINUS}
 N 340 -140 340 -80 {lab=AVDD}
 N 200 -140 340 -140 {lab=AVDD}
 N 200 -760 200 -140 {lab=AVDD}
@@ -293,28 +266,7 @@ N 550 -80 670 -80 {lab=AVDD}
 N 550 -140 550 -80 {lab=AVDD}
 N 550 -140 670 -140 {lab=AVDD}
 N 670 -760 670 -140 {lab=AVDD}
-N -40 -140 -40 -120 {lab=AVDD}
-N -100 -140 -40 -140 {lab=AVDD}
-N -100 -140 -100 70 {lab=AVDD}
-N -100 70 -70 70 {lab=AVDD}
-N -90 -90 -70 -90 {lab=AVSS}
-N -90 -90 -90 110 {lab=AVSS}
-N -90 110 -40 110 {lab=AVSS}
-N -40 100 -40 110 {lab=AVSS}
-N 800 -90 820 -90 {lab=AVSS}
-N 800 -90 800 110 {lab=AVSS}
-N 800 110 850 110 {lab=AVSS}
-N 850 100 850 110 {lab=AVSS}
-N 460 110 800 110 {lab=AVSS}
-N 460 110 460 600 {lab=AVSS}
-N -40 110 460 110 {lab=AVSS}
-N -140 600 460 600 {lab=AVSS}
-N 790 70 820 70 {lab=AVDD}
-N 790 -140 790 70 {lab=AVDD}
-N 790 -140 850 -140 {lab=AVDD}
-N 850 -140 850 -120 {lab=AVDD}
-N 670 -140 790 -140 {lab=AVDD}
-N -40 -140 200 -140 {lab=AVDD}
+N -140 600 940 600 {lab=AVSS}
 N -1490 310 -1390 310 {lab=AVSS}
 N -1490 310 -1490 600 {lab=AVSS}
 N -2710 600 -1490 600 {lab=AVSS}
@@ -328,6 +280,8 @@ N 520 -760 520 -490 {lab=AVDD}
 N 460 -430 560 -430 {lab=#net1}
 N 1000 -760 1000 -570 {lab=AVDD}
 N -1010 -760 -200 -760 {lab=AVDD}
+N 770 -80 810 -80 {lab=MINUS}
+N 50 -80 100 -80 {lab=PLUS}
 C {sg13g2_pr/sg13_lv_pmos.sym} 750 -80 0 1 {name=M1
 l=2u
 w=20u
@@ -480,8 +434,8 @@ m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {ipin.sym} -220 0 0 0 {name=p27 lab=PLUS}
-C {ipin.sym} 1080 0 0 1 {name=p28 lab=MINUS
+C {ipin.sym} 10 -80 0 0 {name=p27 lab=PLUS}
+C {ipin.sym} 850 -80 0 1 {name=p28 lab=MINUS
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} -1370 310 0 1 {name=M18
 l=2u
@@ -647,49 +601,19 @@ size=80u
 shape=0
 padtype=0
 }
-C {sg13g2_pr/diodevdd_2kv.sym} 1990 -210 0 0 {name=D1
-model=diodevdd_2kv
-m=1
-spiceprefix=X
-}
-C {sg13g2_pr/diodevss_2kv.sym} 2000 -10 0 0 {name=D2
-model=diodevss_2kv
-spiceprefix=X
-m=1
-}
-C {sg13g2_pr/bondpad.sym} -180 -60 0 0 {name=X5
+C {sg13g2_pr/bondpad.sym} 50 -140 0 0 {name=X5
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {sg13g2_pr/bondpad.sym} 1040 -60 0 0 {name=X6
+C {sg13g2_pr/bondpad.sym} 810 -140 0 0 {name=X6
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
-}
-C {sg13g2_pr/diodevdd_2kv.sym} -40 -90 0 0 {name=D11
-model=diodevdd_2kv
-m=1
-spiceprefix=X
-}
-C {sg13g2_pr/diodevdd_2kv.sym} 850 -90 0 0 {name=D9
-model=diodevdd_2kv
-m=1
-spiceprefix=X
-}
-C {sg13g2_pr/diodevss_2kv.sym} -40 70 0 0 {name=D12
-model=diodevss_2kv
-spiceprefix=X
-m=1
-}
-C {sg13g2_pr/diodevss_2kv.sym} 850 70 0 0 {name=D10
-model=diodevss_2kv
-spiceprefix=X
-m=1
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} -880 310 0 0 {name=M30
 l=2u
