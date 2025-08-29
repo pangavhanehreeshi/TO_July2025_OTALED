@@ -1,4 +1,4 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 22/08/2025 15:27
+* Extracted by KLayout with SG13G2 LVS runset on : 29/08/2025 11:12
 
 .SUBCKT FMD_QNC_foldedcascode AVSS AVDD IBIAS VOUT PLUS MINUS
 C$1 VOUT AVSS cap_cmim w=25.82u l=25.82u A=666.6724p P=103.28u m=1
